@@ -1,0 +1,33 @@
+spring:
+  application:
+    name:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: false
+    show-sql: true
+    defer-datasource-initialization: true
+    database-platform: H2
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:dividendservice
+    username: sa
+    password:
+
+  redis:
+    host: localhost
+    port: 6379
+
+  jwt:
+    secret: c3Vnb24tc3ByaW5nLWJvb3QtZGl2aWRlbmQtcHJvamVjdC10dXRvcmlhbC1qd3Qtc2VjcmV0LWtl
+
+scheduler:
+  scrap:
+    yahoo: "0 0 0 * * *"

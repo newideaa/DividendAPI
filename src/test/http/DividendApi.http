@@ -1,0 +1,45 @@
+DELETE http://localhost:8080/company/MMM
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzcyIsInJvbGVzIjpbIlJPTEVfUkVBRCIsIlJPTEVfV1JJVEUiXSwiaWF0IjoxNjg5MDE3NjczLCJleHAiOjE2ODkwMjEyNzN9.GB2YE5NQW5MYT7US-ALxhWjXnoy97sgepXJ9te5Fd9OH2boFu2qoWkXP738eClmCbEigDmd-x1naBvPp0mUXCw
+
+###
+POST http://localhost:8080/auth/signin
+Content-Type: application/json
+
+{
+  "username": "ss",
+  "password": "sss"
+}
+
+###
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+  "username": "ss",
+  "password": "sss",
+  "roles": ["ROLE_READ", "ROLE_WRITE"]
+}
+###
+GET http://localhost:8080/company/autocomplete?keyword=I
+Accept: application/json
+
+###
+GET http://localhost:8080/finance/dividend/3M Company
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzcyIsInJvbGVzIjpbIlJPTEVfUkVBRCIsIlJPTEVfV1JJVEUiXSwiaWF0IjoxNjg5MDE3NjczLCJleHAiOjE2ODkwMjEyNzN9.GB2YE5NQW5MYT7US-ALxhWjXnoy97sgepXJ9te5Fd9OH2boFu2qoWkXP738eClmCbEigDmd-x1naBvPp0mUXCw
+
+###
+GET http://localhost:8080/company?size=1&page=1
+Accept: application/json
+
+###
+POST http://localhost:8080/company
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzcyIsInJvbGVzIjpbIlJPTEVfUkVBRCIsIlJPTEVfV1JJVEUiXSwiaWF0IjoxNjg5MDE3NjczLCJleHAiOjE2ODkwMjEyNzN9.GB2YE5NQW5MYT7US-ALxhWjXnoy97sgepXJ9te5Fd9OH2boFu2qoWkXP738eClmCbEigDmd-x1naBvPp0mUXCw
+
+{
+  "ticker": "MMM"
+}
+
+###
+
